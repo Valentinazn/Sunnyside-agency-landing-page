@@ -1,0 +1,11 @@
+.text-navbar-brand {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: var(--white);
+}
+.nav-link.active,
+.nav-link {
+  color: var(--white) !important;
+}
+.navbar-toggler-icon {
+}

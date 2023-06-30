@@ -1,5 +1,12 @@
+import AboveTheFold from "./components/AboveTheFold";
+import Nav from "./components/Nav";
+
 function App() {
-  return <></>;
+  return (
+    <div className="container-fluid">
+      <AboveTheFold />
+    </div>
+  );
 }
 
 export default App;
