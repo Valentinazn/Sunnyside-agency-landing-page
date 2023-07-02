@@ -8,8 +8,8 @@ interface INav {
 
 const Nav = (props: INav) => {
   return (
-    <nav className="">
-      <div className="">
+    <nav className="p-2">
+      <div className="flex w-[100%] items-center justify-between">
         <a href="http://localhost:5173/">
           <img src={props.img} alt="logo" />
         </a>

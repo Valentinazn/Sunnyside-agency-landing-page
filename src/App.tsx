@@ -6,7 +6,7 @@ import Transform from "../public/images/desktop/image-transform.jpg";
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-blue-300">
       <AboveTheFold title={"We are creavites"} img={Arrow} />
 
       <div className="">
