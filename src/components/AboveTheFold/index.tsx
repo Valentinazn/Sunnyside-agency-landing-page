@@ -1,20 +1,28 @@
 import Nav from "../Nav";
 import "./style.css";
-import Arrow from "../../../public/images/icon-arrow-down.svg";
+import Logo from "/images/logo.svg";
 
-const AboveTheFold = () => {
+interface IAboveTheFold {
+  title: string;
+  img: string;
+}
+
+const AboveTheFold = (props: IAboveTheFold) => {
   return (
-    <div className=" container-fluid  bg-above-the-fold">
-      <Nav />
-      <div className="row">
-        <div className="col text-center">
-          <h1 className="h1 text-uppercase text-white  mt-4">
-            We are creavites
-          </h1>
-          <img src={Arrow} />
-        </div>
+    <>
+      <Nav
+        img={Logo}
+        linkAbout="About"
+        linkServices={"Services"}
+        linkProject={"Projects"}
+        linkContact={"Contact"}
+      />
+
+      <div className="">
+        <h1 className="">{props.title}</h1>
+        <img src={props.img} />
       </div>
-    </div>
+    </>
   );
 };
 
