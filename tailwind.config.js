@@ -16,6 +16,10 @@ export default {
         white: "hsl(0, 0%, 100%)",
       },
     },
+    fontFamily: {
+      barlow: ["Barlow", "sans serif"],
+      fraunces: ["Fraunces", "sans serif"],
+    },
   },
   plugins: [],
 };
