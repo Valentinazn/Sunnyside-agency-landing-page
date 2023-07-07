@@ -1,0 +1,8 @@
+.burger {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: white;
+  border-radius: 10px;
+  transform-origin: 1px;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}

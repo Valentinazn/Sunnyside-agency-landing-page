@@ -1,0 +1,35 @@
+.p-5 {
+  padding: 40px !important;
+}
+.container-section-text h2,
+.container-section-text a {
+  font-family: "Fraunces", sans-serif;
+
+  color: var(--very-dark-desaturated-blue) !important;
+}
+
+.container-section-text h2 {
+  font-size: 40px;
+}
+
+.container-section-text p {
+  line-height: 25px;
+  color: var(--very-dark-grayish-blue);
+}
+
+.container-section-text {
+  text-align: center;
+}
+
+@media (min-width: 765px) {
+  .p-5 {
+    padding: 150px !important;
+  }
+  .container-section-text {
+    text-align: left;
+  }
+
+  .container-section-text h2 {
+    width: 75%;
+  }
+}
