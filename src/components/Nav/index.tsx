@@ -18,7 +18,7 @@ const Nav = (props: INav) => {
   };
   return (
     <nav className="flex my-0 mx-auto w-[90%] py-7  md:py-0 ">
-      <div className="flex w-[100%] items-center justify-between  mx-auto max-w-7xl">
+      <div className="flex w-[100%] items-center justify-between  mx-auto max-w-screen-2xl">
         <a href="http://localhost:5173/">
           <img src={props.img} alt="logo" />
         </a>
@@ -26,11 +26,11 @@ const Nav = (props: INav) => {
         <div
           className={` ${
             hamburgerIsOpen ? "visible" : "invisible"
-          } header-menu p-10`}
+          } header-menu py-8`}
         >
           <span className="triangle"></span>
           <ul
-            className={` md:flex md:justify-center md:items-center gap-8 text-white md:visible`}
+            className={` sm:flex sm:justify-center sm:items-center gap-8 text-white sm:visible`}
           >
             <li>
               <a href="#">{props.linkAbout}</a>
@@ -41,13 +41,13 @@ const Nav = (props: INav) => {
             <li>
               <a href="#">{props.linkProject}</a>
             </li>
-            <button className="md:bg-white bg-yellow font-fraunces ">
+            <button className="sm:bg-white bg-yellow font-fraunces ">
               <a href="#">{props.linkContact}</a>
             </button>
           </ul>
         </div>
 
-        <div className="block md:hidden" onClick={toggleClick}>
+        <div className="block sm:hidden" onClick={toggleClick}>
           <Hamburger />
         </div>
       </div>
