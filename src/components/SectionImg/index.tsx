@@ -1,5 +1,3 @@
-import "./style.css";
-
 interface ISection {
   img: string;
   text?: string;

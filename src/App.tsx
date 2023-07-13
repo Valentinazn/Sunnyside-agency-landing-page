@@ -6,8 +6,33 @@ import Transform from "../public/images/desktop/image-transform.jpg";
 import StandOut from "../public/images/desktop/image-stand-out.jpg";
 import GraphicDesign from "../public/images/desktop/image-graphic-design.jpg";
 import Photography from "../public/images/desktop/image-photography.jpg";
+import { useEffect, useState } from "react";
+import { IDb } from "./type";
+import Testimonial from "./components/Testimonial";
 
 function App() {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [data, setData] = useState<IDb[]>();
+
+  async function fetchData() {
+    setLoading(false);
+    try {
+      const response = await fetch("db.json");
+      const db = await response.json();
+      if (db) {
+        setData(db);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    setLoading(true);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  console.log(data);
   return (
     <>
       <AboveTheFold title={"We are creavites"} img={Arrow} />
@@ -55,6 +80,14 @@ function App() {
           img={Photography}
           text="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention."
         />
+      </div>
+      <div className="grid grid-cols-1 place-items-center lg:p-[165px] gap-[81px]">
+        <h3 className="justify-self-center text-[20px] uppercase text-grayishBlue font-fraunces font-black ">
+          Client Testimonials
+        </h3>
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-[30px]">
+          {loading && <Testimonial data={data ?? []} />}
+        </div>
       </div>
     </>
   );
