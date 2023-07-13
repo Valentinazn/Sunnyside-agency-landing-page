@@ -10,16 +10,16 @@ const Section = (props: ISection) => {
       <h2 className=" text-darkBlue lg:text-[40px] text-[32px] font-black font-fraunces">
         {props.title}
       </h2>
-      <p className="">{props.text}</p>
-      <div className="">
-        <a className="">{props.linkText}</a>
+      <p className="text-grayishBlue font-[18px] tracking-[-0.129px] leading-[30px]">
+        {props.text}
+      </p>
+      <div className="relative w-[137px] text-center justify-self-center sm:justify-self-start">
+        <a className="text-veryDarkDesaturatedBlue uppercase font-fraunces font-black text-[15px] tracking-[1px]">
+          {props.linkText}
+        </a>
         <div
-          className=""
+          className="absolute bg-yellow h-[10px] w-full top-[15px] rounded-[28px] opacity-25"
           style={{
-            bottom: "20%",
-            width: "25%",
-            height: "5px",
-            backgroundColor: "yellow",
             zIndex: -10,
           }}
         ></div>
