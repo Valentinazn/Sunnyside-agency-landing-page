@@ -1,13 +1,13 @@
 .bg-above-the-fold {
   background-image: url("../public/images/desktop/image-header.jpg");
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 500px;
+  height: 100vh;
 }
-
-h1 {
-  font-family: "Fraunces", sans-serif;
-  font-weight: 900;
-  letter-spacing: 10px;
+@media (max-width: 640px) {
+  .bg-above-the-fold {
+    background-image: url("../public/images/mobile/image-header.jpg");
+  }
 }
