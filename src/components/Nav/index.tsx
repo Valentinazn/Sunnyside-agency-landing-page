@@ -19,7 +19,7 @@ const Nav = (props: INav) => {
   return (
     <nav className="flex my-0 mx-auto w-[90%] py-7  md:py-0 ">
       <div className="flex w-[100%] items-center justify-between  mx-auto max-w-screen-2xl">
-        <a href="http://localhost:5173/">
+        <a href="https://lively-cascaron-c1a64b.netlify.app/">
           <LogoSvg color="white" />
         </a>
 
