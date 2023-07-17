@@ -1,5 +1,5 @@
 .bg-above-the-fold {
-  background-image: url("../public/images/desktop/image-header.jpg");
+  background-image: url("/images/desktop/image-header.jpg");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,6 +8,6 @@
 }
 @media (max-width: 640px) {
   .bg-above-the-fold {
-    background-image: url("../public/images/mobile/image-header.jpg");
+    background-image: url("/images/mobile/image-header.jpg");
   }
 }
