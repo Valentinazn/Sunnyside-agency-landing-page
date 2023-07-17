@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Hamburger from "../Hamburger";
 import "./style.css";
+import LogoSvg from "../../assets/svg/LogoSvg";
 
-interface INav {
-  img: string;
+export interface INav {
   linkAbout: string;
   linkServices: string;
   linkProject: string;
@@ -20,7 +20,7 @@ const Nav = (props: INav) => {
     <nav className="flex my-0 mx-auto w-[90%] py-7  md:py-0 ">
       <div className="flex w-[100%] items-center justify-between  mx-auto max-w-screen-2xl">
         <a href="http://localhost:5173/">
-          <img src={props.img} alt="logo" />
+          <LogoSvg color="white" />
         </a>
 
         <div
@@ -30,17 +30,17 @@ const Nav = (props: INav) => {
         >
           <span className="triangle"></span>
           <ul
-            className={` sm:flex sm:justify-center sm:items-center gap-8 text-white sm:visible`}
+            className={`sm:flex sm:justify-center sm:items-center gap-8 text-white sm:visible`}
           >
-            <li>
-              <a href="#">{props.linkAbout}</a>
-            </li>
-            <li>
-              <a href="#">{props.linkServices}</a>
-            </li>
-            <li>
-              <a href="#">{props.linkProject}</a>
-            </li>
+            {[props.linkAbout, props.linkServices, props.linkProject].map(
+              (i) => {
+                return (
+                  <li key={i}>
+                    <a href="#">{i}</a>
+                  </li>
+                );
+              }
+            )}
             <button className="sm:bg-white bg-yellow font-fraunces ">
               <a href="#">{props.linkContact}</a>
             </button>
