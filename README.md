@@ -21,7 +21,7 @@ Users should be able to:
 
 ## Link 💻
 
-https://interactive-rating-component-vz.netlify.app
+https://sunnyside-agency-landing-page-vz.netlify.app/
 
 
 ## Build with 👷‍♀️
