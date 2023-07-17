@@ -1,17 +1,15 @@
+import IconArrowDownSvg from "../../assets/svg/IconArrowDownSvg";
 import Nav from "../Nav";
 import "./style.css";
-import Logo from "/images/logo.svg";
 
 interface IAboveTheFold {
   title: string;
-  img: string;
 }
 
 const AboveTheFold = (props: IAboveTheFold) => {
   return (
     <div className="bg-above-the-fold">
       <Nav
-        img={Logo}
         linkAbout="About"
         linkServices={"Services"}
         linkProject={"Projects"}
@@ -22,7 +20,7 @@ const AboveTheFold = (props: IAboveTheFold) => {
         <h1 className="font-fraunces font-black text-[40px] text-center md:text-[56px] text-white uppercase tracking-[6.75px] md:tracking-[8.75px]">
           {props.title}
         </h1>
-        <img src={props.img} />
+        <IconArrowDownSvg />
       </div>
     </div>
   );
